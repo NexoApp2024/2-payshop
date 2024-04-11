@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true">
+  <ion-row class="ion-justify-content-center">
+    <div class="ion-margin-top box-login">
+      <ion-card class="card-login">
+        <ion-card-content class="card-login-content">
+
+          <ion-row class="w-100">
+            <ion-col size="12">
+              <img [src]="logoPrincipal">
+            </ion-col>
+            <ion-col size="12">
+              <form [formGroup]="loginForm">
+                <ion-item class="item-input" lines="none">
+                  <ion-input label="Correo" formControlName="email" label-placement="floating" placeholder="example@example.com" type="email"></ion-input>
+                </ion-item>
+                <ion-item class="item-input ion-margin-top" lines="none">
+                  <ion-input label="Constraseña" formControlName="password" label-placement="floating" placeholder="" type="password"></ion-input>
+                </ion-item>
+
+                <ion-button class="w-100 margin-top-doble btn-xl-green" [disabled]="loginForm.invalid" (click)="login()">
+                  Entrar
+                </ion-button>
+              </form>
+            </ion-col>
+
+            <ion-col size="12" class="ion-margin-top">
+              <a class="ion-margin-top ">Olvide mi constraseña?</a>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+  </ion-row>
+</ion-content>

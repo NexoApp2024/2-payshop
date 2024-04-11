@@ -1,0 +1,51 @@
+
+.card-login {
+  margin-top: 10vh;
+  border-radius: 1.5rem;
+  box-shadow: 20px 20px 0px 3px rgb(81 81 81 / 30%);
+  padding: 2rem;
+}
+
+.card-login-content {
+  height: 50vh;
+  margin: auto;
+  width: 100%;
+}
+
+ion-content {
+  --background: #68e099;
+}
+
+.margin-top-doble {
+  margin-top: 2rem !important;
+}
+
+.box-login {
+  width: 40%;
+}
+
+@media only screen and (max-width: 1920px) {
+  .box-login {
+    width: 30%;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .box-login {
+    width: 30%;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  .box-login {
+    width: 100%;
+  }
+
+  .card-login-content {
+    height: 60vh;
+    margin: auto;
+    width: 100%;
+  }
+}

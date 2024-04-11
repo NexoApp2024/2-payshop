@@ -1,0 +1,111 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-img src="../../../assets/img/logo.png" class="icon-nav" slot="start"></ion-img>
+    
+    <div class="box-end-header">
+      <ion-item slot="end" class="avatar-box">
+        <ion-avatar slot="start">
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+        <ion-label class="profile-name">Item Avatar</ion-label>
+      </ion-item>
+      <ion-icon name="log-in-outline" class="icon-exit" (click)="logout()"></ion-icon>
+    </div>
+    
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row class="ion-no-padding">
+    <ion-col size="2" class="box-item-center-options">
+      
+      <ion-item class="item-center-options" 
+        [ngClass]="{'item-center-options-active': moduleSelect === 'CLIENTES'}"
+        lines="none" 
+        (click)="moduleSelect = 'CLIENTES'"
+      >
+        <div class="box-inner-options">
+          <ion-icon name="people-outline" class="icon-blue"></ion-icon>
+          <ion-label class="icon-blue">Clientes</ion-label>
+        </div>
+      
+        
+      </ion-item>
+      <ion-item 
+        [ngClass]="{'item-center-options-active': moduleSelect === 'TIENDAS'}"
+        class="item-center-options" 
+        lines="none" 
+        (click)="moduleSelect = 'TIENDAS'"
+      >
+        <div class="box-inner-options">
+          <ion-icon name="storefront-outline" class="icon-orange"></ion-icon>
+          <ion-label class="icon-orange">Tiendas</ion-label>
+        </div>
+      </ion-item>
+
+      <ion-item 
+        [ngClass]="{'item-center-options-active': moduleSelect === 'TRANSACCIONES'}"
+        class="item-center-options" 
+        lines="none" 
+        (click)="moduleSelect = 'TRANSACCIONES'"
+      >
+        <div class="box-inner-options">
+          <ion-icon name="analytics-outline" class="icon-blue"></ion-icon>
+          <ion-label class="icon-blue">Transacciones</ion-label>
+        </div>
+      </ion-item>
+
+      <ion-item 
+        [ngClass]="{'item-center-options-active': moduleSelect === 'GENERAL'}"
+        class="item-center-options" 
+        lines="none"  
+        (click)="moduleSelect = 'GENERAL'"
+      >
+        <div class="box-inner-options">
+          <ion-icon name="construct-outline"></ion-icon>
+          <ion-label >General</ion-label>
+        </div>
+       
+        
+      </ion-item>
+    </ion-col>
+
+    <ion-col size="10" class="ion-no-padding">
+      <ion-card class="card-content" *ngIf="moduleSelect === 'CLIENTES'">
+        <ion-card-header class="card-header">
+          <div class="text-header">
+            <ion-icon name="people-outline"></ion-icon> CLIENTES
+          </div>
+        </ion-card-header>
+        <app-admin-clientes-component></app-admin-clientes-component>
+      </ion-card>
+
+      <ion-card class="card-content" *ngIf="moduleSelect === 'TIENDAS'">
+        <ion-card-header class="card-header">
+          <div class="text-header">
+            <ion-icon name="people-outline"></ion-icon> TIENDAS
+          </div>
+        </ion-card-header>
+        
+      </ion-card>
+
+      <ion-card class="card-content" *ngIf="moduleSelect === 'TRANSACCIONES'">
+        <ion-card-header class="card-header">
+          <div class="text-header">
+            <ion-icon name="people-outline"></ion-icon> TRANSACCIONES
+          </div>
+        </ion-card-header>
+      </ion-card>
+
+      <ion-card class="card-content" *ngIf="moduleSelect === 'GENERAL'">
+        <ion-card-header class="card-header">
+          <div class="text-header">
+            <ion-icon name="people-outline"></ion-icon> GENEREAL
+          </div>
+        </ion-card-header>
+        
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>
