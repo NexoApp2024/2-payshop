@@ -77,3 +77,35 @@ div:where(.swal2-container).swal2-backdrop-show, div:where(.swal2-container).swa
   background: #68e099;
   padding: 0 1rem;
 }
+
+.option-select {
+  border: 2px solid #59e09e;
+  border-radius: 1rem;
+  --padding-bottom: 1rem;
+  --padding-end: 1rem;
+  --padding-top: 1rem;
+  --padding-start: 1rem;
+  margin-bottom: 1rem;
+  --background: #d2ffef;
+
+  ion-label {
+    font-size: 1.2rem !important;
+    font-weight: 600;
+    font-stretch: expanded;
+  }
+}
+
+.icon-select {
+  color: #59e09e !important;
+}
+
+.option-select:hover {
+  --background: #59e09e;
+  ion-icon {
+    color: #FFF !important;
+  }
+  
+  ion-label {
+    color: #FFF !important;
+  }
+}

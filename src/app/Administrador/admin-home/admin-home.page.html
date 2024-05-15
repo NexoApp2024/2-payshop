@@ -23,7 +23,7 @@
       <ion-item class="item-center-options" 
         [ngClass]="{'item-center-options-active': moduleSelect === 'CLIENTES'}"
         lines="none" 
-        (click)="moduleSelect = 'CLIENTES'"
+        (click)="moduleSelect = 'CLIENTES'; nameSection=''"
       >
         <div class="box-inner-options">
           <ion-icon name="people-outline" class="icon-blue"></ion-icon>
@@ -36,7 +36,7 @@
         [ngClass]="{'item-center-options-active': moduleSelect === 'TIENDAS'}"
         class="item-center-options" 
         lines="none" 
-        (click)="moduleSelect = 'TIENDAS'"
+        (click)="moduleSelect = 'TIENDAS'; nameSection=''"
       >
         <div class="box-inner-options">
           <ion-icon name="storefront-outline" class="icon-orange"></ion-icon>
@@ -48,7 +48,7 @@
         [ngClass]="{'item-center-options-active': moduleSelect === 'TRANSACCIONES'}"
         class="item-center-options" 
         lines="none" 
-        (click)="moduleSelect = 'TRANSACCIONES'"
+        (click)="moduleSelect = 'TRANSACCIONES'; nameSection=''"
       >
         <div class="box-inner-options">
           <ion-icon name="analytics-outline" class="icon-blue"></ion-icon>
@@ -60,7 +60,7 @@
         [ngClass]="{'item-center-options-active': moduleSelect === 'GENERAL'}"
         class="item-center-options" 
         lines="none"  
-        (click)="moduleSelect = 'GENERAL'"
+        (click)="moduleSelect = 'GENERAL'; nameSection=''"
       >
         <div class="box-inner-options">
           <ion-icon name="construct-outline"></ion-icon>
@@ -74,11 +74,21 @@
     <ion-col size="10" class="ion-no-padding">
       <ion-card class="card-content" *ngIf="moduleSelect === 'CLIENTES'">
         <ion-card-header class="card-header">
-          <div class="text-header">
-            <ion-icon name="people-outline"></ion-icon> CLIENTES
-          </div>
+
+          <ion-breadcrumbs>
+            <ion-breadcrumb  class="text-header" >
+              <ion-icon name="people-outline"></ion-icon>
+              Clientes
+            </ion-breadcrumb>
+            <ion-breadcrumb *ngIf="nameSection !== '' " class="text-header">
+              {{nameSection}}
+            </ion-breadcrumb>
+          
+          </ion-breadcrumbs>
         </ion-card-header>
-        <app-admin-clientes-component></app-admin-clientes-component>
+        <app-admin-clientes-component
+        (changueNameSection)="changueNameSection($event)"
+        ></app-admin-clientes-component>
       </ion-card>
 
       <ion-card class="card-content" *ngIf="moduleSelect === 'TIENDAS'">

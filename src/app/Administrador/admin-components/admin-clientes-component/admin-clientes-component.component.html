@@ -1,22 +1,25 @@
-<ion-list [inset]="true">
-  <ion-item [button]="true">
-    <ion-icon color="danger" slot="start" name="list-circle" size="large"></ion-icon>
+<ion-list [inset]="true" *ngIf="typeSelect === 'HOME_SELECTOR'">
+  <ion-item [button]="true" lines="none" class="option-select"
+    (click)="optionChange('Listado de clientes', 'LIST_CLIENT')">
+    <ion-icon slot="start" name="people" size="large" class="icon-select"></ion-icon>
     <ion-label>Listado de clientes</ion-label>
-    <ion-note slot="end">6</ion-note>
   </ion-item>
-  <ion-item [button]="true">
-    <ion-icon color="tertiary" slot="start" name="list-circle" size="large"></ion-icon>
+  <ion-item [button]="true" lines="none" class="option-select"
+    (click)="optionChange('Crear nuevo cliente', 'NEW_CLIENT')">
+    <ion-icon slot="start" name="person-add" size="large" class="icon-select"></ion-icon>
     <ion-label>Crear nuevo cliente</ion-label>
-    <ion-note slot="end">15</ion-note>
   </ion-item>
-  <!-- <ion-item [button]="true">
-    <ion-icon color="success" slot="start" name="list-circle" size="large"></ion-icon>
-    <ion-label></ion-label>
-    <ion-note slot="end">3</ion-note>
-  </ion-item>
-  <ion-item [button]="true">
-    <ion-icon color="warning" slot="start" name="list-circle" size="large"></ion-icon>
-    <ion-label>Reminders</ion-label>
-    <ion-note slot="end">8</ion-note>
-  </ion-item> -->
 </ion-list>
+
+
+<ion-row *ngIf="typeSelect === 'LIST_CLIENT'">
+  <ion-col size='12'>
+    <app-tabla-cliente></app-tabla-cliente>
+  </ion-col>
+</ion-row>
+
+<ion-row *ngIf="typeSelect === 'NEW_CLIENT'">
+  <ion-col size='12'>
+    <app-nuevo-cliente></app-nuevo-cliente>
+  </ion-col>
+</ion-row>

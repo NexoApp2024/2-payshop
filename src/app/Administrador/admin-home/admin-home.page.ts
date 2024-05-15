@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
 })
 export class AdminHomePage implements OnInit {
 
-  moduleSelect = 'GENERAL'
+  moduleSelect = 'CLIENTES'
+  nameSection = '';
 
   constructor(private route: Router) { }
 
@@ -17,6 +18,11 @@ export class AdminHomePage implements OnInit {
 
   logout() {
     this.route.navigateByUrl('/login')
+  }
+
+  changueNameSection(event: any) {
+    console.log(event)
+    this.nameSection = event;
   }
 
 }

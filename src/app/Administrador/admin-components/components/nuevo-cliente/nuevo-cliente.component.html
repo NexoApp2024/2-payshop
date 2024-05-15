@@ -1,0 +1,99 @@
+<ion-row class="ion-padding"> 
+  <ion-col size="6" class="ion-padding">
+
+    <ion-title>Datos cliente</ion-title>
+
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" name="name"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input type="text" name="lastname"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Cedula de identida</ion-label>
+      <ion-input type="text" name="ci"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Pais</ion-label>
+      <ion-input type="text" name="ci"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Estado</ion-label>
+      <ion-input type="text" name="ci"></ion-input>
+    </ion-item>
+
+     <ion-item>
+      <ion-label position="floating">Direccion</ion-label>
+      <ion-input type="text" name="ci"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Número de teléfono</ion-label>
+      <ion-input type="tel" name="phone_number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input type="email" name="email"></ion-input>
+    </ion-item>
+  
+  </ion-col>
+
+  <ion-col size="6" class="ion-padding">
+
+    <ion-title>Datos comercio</ion-title>
+
+    <ion-item>
+      <ion-label position="floating">Nombre del negocio</ion-label>
+      <ion-input type="text" name="business_name"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Tipo de negocio</ion-label>
+      <ion-select name="business_type">
+        <ion-select-option value="retail">Retail</ion-select-option>
+        <ion-select-option value="restaurant">Restaurant</ion-select-option>
+        <ion-select-option value="service">Service</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+
+    <ion-item>
+      <ion-label position="floating">Número de WhatsApp</ion-label>
+      <ion-input type="tel" name="whatsapp_number"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Número de teléfono local</ion-label>
+      <ion-input type="tel" name="local_phone_number"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Número de teléfono local</ion-label>
+      <ion-input type="tel" name="local_phone_number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">RIF o cédula de identidad</ion-label>
+      <ion-input type="text" name="rif_ci"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>¿Está activo?</ion-label>
+      <ion-toggle name="is_active" checked="true"></ion-toggle>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-label>¿Va a poseer pasarela de pago?</ion-label>
+      <ion-toggle name="has_payment_gateway" checked="false"></ion-toggle>
+    </ion-item> -->
+    
+  </ion-col>
+
+  <ion-col size="12">
+    <ion-button expand="block" type="submit" class="ion-padding">Registrar cliente</ion-button>
+  </ion-col>
+</ion-row>
